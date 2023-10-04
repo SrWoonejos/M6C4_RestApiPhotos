@@ -10,7 +10,6 @@ class PhotoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     private val binding = PhotosListItemBinding.bind(itemView)
 
-    }
     fun render(photo: Photo) {
         Picasso.get()
             .load(photo.url)

@@ -1,5 +1,17 @@
 package com.dmiranda.restapiphotos_m6c4.view
 
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.dmiranda.restapiphotos_m6c4.databinding.ActivityMainBinding
+import com.dmiranda.restapiphotos_m6c4.model.Photo
+import com.dmiranda.restapiphotos_m6c4.retrofit.RetrofitClient
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import retrofit2.Response
+import android.widget.Toast
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -37,7 +49,12 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun runOnUiThread(function: () -> Unit) {
+
+    }
+
     private fun showToast(){
         Toast.makeText(this,"No se pudo cargar los datos desde la API",Toast.LENGTH_SHORT).show()
     }
 }
+
