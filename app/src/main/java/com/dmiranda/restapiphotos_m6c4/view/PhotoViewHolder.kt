@@ -19,3 +19,7 @@ class PhotoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         binding.setIndicatorsEnabled(true)
     }
 }
+
+private fun PhotosListItemBinding.setIndicatorsEnabled(b: Boolean) {
+
+}
